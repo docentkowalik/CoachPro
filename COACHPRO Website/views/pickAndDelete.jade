@@ -1,0 +1,38 @@
+doctype html
+html
+ head
+  title= title 
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  link(rel='stylesheet', href='/stylesheets/additions2.css')
+  link(rel='shortcut icon', href='/images/favi.png')
+
+
+
+
+
+ body.player-profile-body
+  nav.navbar.navbar-inverse.player-profile
+   div.container
+    div.navbar-header
+     a(href="/dashboard") 
+      img(src="images/cardiopro_small.png", id="logo_small")
+     h1.bigText #{pageTitle} 
+   
+    ul.nav.navbar-nav.navbar-right
+     li.active.log-out.boxMenu
+      a(href="/addNewClub") ADD NEW TEAM
+     li.active.log-out.boxMenu
+      a(href="/logout") Logout
+     
+
+  
+  center
+   h1.reg-TEXT. DELETE TEAM
+   for club in clubs
+    ul
+     li.listItemDel #{club.clubName}
+      a(href='/deleteClub?CLUBID=#{club._id}&CLUBCODE=#{club.clubCode}', class='btnDelete') DELETE
+     
+
+  

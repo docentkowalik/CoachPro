@@ -1,0 +1,161 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/additions2.css')
+    link(rel='shortcut icon', href='/images/favi.png')
+
+    //-
+      Ok, the Jade page is going to produce a html page that uses HighCharts. HighCharts
+      is a client side Javascript library which requires jQuery so lets include both of
+      them (jQuery first)
+
+    script(src='http://code.jquery.com/jquery-1.8.2.min.js')
+    script(src='http://code.highcharts.com/highcharts.js')
+
+
+    script.
+
+      var chartData = [];
+      var timeData = [];
+
+      function addToChartDataArray(theData) {
+        chartData.push(theData);
+      }
+
+       function timeDataArray(theDataTime) {
+        timeData.push(theDataTime);
+      }
+
+      function drawChart() {
+        chart = $('#chartContainer').highcharts({
+            chart: {
+                renderTo: 'container',
+                type: 'spline',
+                alignTicks: false
+            },
+            title: {
+                text: 'COACHPRO'
+            },
+           
+            xAxis: {
+                title: {
+                    text: 'Time (h:m:s)'
+                },
+
+                categories: timeData 
+
+            },
+            yAxis: {
+                min: 0,
+                minRange: 0,
+                startOnTick: true,
+                title: {
+                    text: 'Distance (Meters)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:12px">Time:{point.key} Seconds</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} Meters</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+            name: 'Distance',
+                
+                data: chartData
+                //data: [1,2,3,4,5,6,7,8,9]
+            }]
+        });
+      }
+    
+    //-
+      See the code below. It is writing out javascript code. Assuming that the array dataFromDB
+      contains the following :
+
+        [{number:1}, {number:2}, {number:3}, {number:4}, {number:5}]
+      
+      Then the code that will be written out below is:
+
+        <script type='text/javascript'>
+          function init() {
+            addToChartDataArray(1);
+            addToChartDataArray(2);
+            addToChartDataArray(3);
+            addToChartDataArray(4);
+            addToChartDataArray(5);
+            drawChart();
+          }
+        </script>
+
+      Note also that the init() function above gets called when the body tag is loaded. So when the
+      body is loaded the init() method gets called, the chartData get filled with numbers and then
+      the drawChart() function gets called which uses HighCharts to draw a chart.
+      
+    // END OF COMMENT
+
+    != "<script type='text/javascript'>"
+    != "function init() {"
+    for data in dataFromDB
+      != "addToChartDataArray(" + data.distance + ");"
+      != "timeDataArray(" + data.secondsVal + ");"
+    != "drawChart();"
+    != "}"
+    != "</script>"
+
+
+
+  body(onload='init();').player-profile-body
+   nav.navbar.navbar-inverse.player-profile
+    div.container
+     div.navbar-header
+      a(href="/dashboard") 
+       img(src="images/cardiopro_small.png", id="logo_small")
+      h1.bigText #{pageTitle} 
+
+     ul.nav.navbar-nav.navbar-right
+      li.active.log-out.boxMenu
+       a(href="/logout") Logout
+
+     div.navbar-inner
+      div.nav-center
+       div(class='nav-center', id='middleText')
+        h3.bigText #{displayUser}  
+      
+
+
+
+  div#content-container
+   div#inner-container
+    div#left-content
+     div#scroll-player-tabs
+      ul
+       for data in dataFromDB
+        a(href="#") 
+         li.listItem.pushleft #{data.date}  
+
+
+     
+   
+    div#right-content
+     div#chartContainer 
+
+     div#dataContainer
+      div.icons 
+       span.glyphicon.glyphicon-time &nbsp
+        h4 TOTAL TIME &nbsp #{timeJade.hoursVal}h : #{timeJade.minutesVal}m : #{timeJade.secondsVal}s      
+       span.glyphicon.glyphicon-road  
+        h4 DISTANCE &nbsp #{timeJade.distance} METERS
+       span.glyphicon.glyphicon-stats &nbsp
+        h4 AVG.SPEED &nbsp #{timeJade.acc}
+

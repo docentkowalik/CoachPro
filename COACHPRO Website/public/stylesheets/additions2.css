@@ -1,0 +1,414 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*font inport*/
+h1, h2, h3, h4, h5, p, a, input{
+	font-family: agency;
+}
+@font-face
+{
+font-family: agency;
+src:url(../fonts/agency_fb.ttf);
+}
+body{
+	padding-bottom:0px;
+	
+	
+}
+.btnDelete
+{
+	
+	font-family:agency;
+	font-size: 17px;
+	border: none;
+color: white;
+font-weight: bold;
+		box-shadow: 2px 2px 2px grey;
+		background-color:#E21717;
+margin-top: 2px;
+display: block;
+}
+.btnDelete:hover
+{
+	
+	font-family:agency;
+	font-size: 17px;
+	border: none;
+color: black;
+font-weight: bold;
+		box-shadow: 1px 1px 1px grey;
+		background-color:#E21717;
+margin-top: 2px;
+
+}
+
+
+
+.optionsss{
+	display: inline;
+}
+
+}
+
+
+	.reg-TEXT{
+	font-weight:bold;
+	font-family:agency;
+	font-size:50px;
+	color: #676767;	
+	margin-top: 0px;
+	}
+
+.bigText{
+text-transform: uppercase; /* force text to uppercase */
+color:white;
+font-size: 30px;
+
+}
+.boxMenu{
+text-transform: uppercase; /* force text to uppercase */
+color:white;
+padding-top: -10px;
+	padding-bottom: -10px;
+}
+#reg{
+	background-color:#efeeee;
+	background-image:url("/images/white_wall_hash.png");
+}
+
+#login-text{
+	padding-left:10px;
+	padding-right:10px;
+	
+	}
+
+.navbar-right{
+	
+	}
+	
+.carousel slid{
+	box-shadow:#666 2px 2px 5px;
+	
+	}	
+.col-md-12{
+	/*background-image:url(../img/Untitled-3.png);*/
+	background-color:#376533;
+	
+	
+	}
+input{
+	display:block;
+	margin:20px 0px;
+	
+	font-family:agency;
+	font-size:20px;
+	background-color:rgba(255,255,255,0.2);
+	border:none;
+	color:#FFF;
+	width: 200px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+    color: ffffff;
+	text-align:center;
+}
+
+p{
+	color:#CCC;
+	font-family:agency;
+	font-size: 24px;
+	
+}
+.btn-lg{
+	margin-bottom:20px;
+	font-size: 24px;
+	width: 200px;
+	max-width: 200px;
+	height: 36px;
+	line-height: 18px;
+}
+.btn-lg:hover{
+	background-color: #2a2424;
+	color: #cecaca;
+}
+.reg-link{
+	text-decoration:underline;
+	color:#CCC;
+}
+.container{
+	height:100%;
+	display:block;
+	}
+
+hr{
+	width:23%;
+	min-width:270px;
+	color:#333;
+	background-color:#333;
+	height:7px;
+	
+	}
+h1.wel{
+	color: white;
+}	
+.reg-container h1{
+	font-weight:bold;
+	font-size:60px;
+	
+	}
+h1{
+	display: inline-block;
+	font-weight: bold;
+	font-size:35px;
+}	
+	
+/**/	
+.reg-btn{
+	color:#FFF;
+	background-color:#333;
+	font-size:30px;
+}
+.reg-btn:hover{
+	color:#CCC;		
+}
+.label-style{
+	font-weight:;
+	font-size:18px;
+	font-family: 'Russo One', sans-serif;
+	
+}
+.btn-default btn-lg{
+	width: 300px;
+}
+
+/*player profile page*/
+html, body{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+    
+}
+.player-profile-body{
+	background-image: url(../images/white_wall_hash.png);
+
+}
+/*hide round borders*/
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+.player-profile{
+	width:100%;
+	background-image:url(../images/seemless_bk_2.jpg);
+	border:none;
+}
+
+#inner-container{
+
+	width: 900px;
+	height: 630px;
+	background-color: rgba(204,204,204, 0.3);
+	position:absolute;
+	left: 50%;
+    margin-left: -450px;
+	padding:25px;
+	
+       
+}
+#left-content{
+	background-color:transparent;
+	width: 240px;
+	min-height: 500px;
+	display:inline-block;
+	}
+	#tab-text{
+		width:240px;
+		height:auto;
+		position:fixed;
+		background-color:#CCC;
+		
+	}
+#right-content{
+	width:606px;
+	min-height:580px;
+	background-color: white;
+	float:right;	
+	position: relative;
+	}
+
+	#chartContainer{
+	width: 605px;
+	height: 350px;
+	border-bottom: 2px solid #CCC;
+position: absolute; top: 0px; left: 0px; 
+}
+
+#dataContainer{
+	width: 605px;
+	height: 220px;
+	border-top: 2px solid #CCC;
+position: absolute; top: 360px; left: 0px; 
+}
+
+
+	#graph{
+		width:586px;
+		height:300px;
+		margin:10px;
+		border: 2px solid black;
+	}
+
+.text-right{
+	float: right;
+}	
+.player-tab{
+	display:inline-block;
+	width:170px;
+	height:40px;
+	border-left:3px solid #333;
+    border-right:3px solid #333;
+
+	background-color:#CCC;
+	margin-bottom:5px;
+	text-align: center;
+		color: white;
+	font-family:agency;
+	font-size: 24px;
+	}
+#scroll-player-tabs{
+	height:600px;
+	overflow:scroll;
+    }.active-tab{
+		background-color:#FFF;
+	}
+
+div.player-tab:first-child{
+		margin-top:0px;
+		background-color:red;
+	}.tab-1{
+		margin-top:20px;
+	}
+	
+.log-out{
+	background-color:transparent;
+	border-left:2px solid #CCC;
+	border-right:2px solid #CCC;
+	margin-right:90px;
+	height: 80px;
+	line-height: 80px;
+	text-align: center;
+	font-size: 30px;
+	
+	
+	}
+	.log-out a{
+		line-height: 80px;
+		margin-top: 10px;
+		}
+	.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+		background-color:transparent;
+	}
+	.navbar-inverse{
+		width: 100%;
+	}
+
+.col-lg-12{
+	text-align: center;
+	font-size: 30px;
+	color: green;
+}
+.col-lg-12 a{
+	color: green;
+	text-decoration: none;
+	list-style-type: none;
+}
+#logo_small{
+	margin: 0px 30px 20px 30px;
+}
+
+.listItem {
+	box-shadow: 2px 2px 2px grey;
+	padding-bottom:5px;
+		padding-top:5px;
+
+	text-decoration: none;
+	margin-top: 15px; 
+	margin-bottom: 15px; 
+	list-style-type: none;
+  width: 300px;
+	margin-right: 50px;
+	font-weight: bold;
+font-family: agency;
+font-size: 30px;
+color: #6c6b6b;
+background-color: #CCC;
+
+}
+.listItem:hover{
+		box-shadow: 1px 1px 1px grey;
+		color:#303030;
+
+}
+
+.listItemDel{
+	box-shadow: 2px 2px 2px grey;
+	padding-bottom:5px;
+		padding-top:5px;
+
+	text-decoration: none;
+	margin-top: 15px; 
+	margin-bottom: 15px; 
+	list-style-type: none;
+  width: 300px;
+	margin-right: 50px;
+	font-weight: bold;
+font-family: agency;
+font-size: 30px;
+color: #6c6b6b;
+background-color: #CCC;
+
+}
+
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
+.pushleft{
+	width: 140px;
+	text-align: center;
+		margin-bottom: 5px; 
+			margin-top: 5px; 
+
+font-weight: bold;
+font-family: agency;
+font-size: 20px;
+background-color:#CCC;
+padding-bottom:2px;
+		padding-top:2px;
+		border: 2px solid #CCC; 
+}
+
+h4{
+	display: inline-block;
+	font-size: 25px;
+
+}
+
+.icons{
+	margin-left: 20px;
+	margin-top: 35px;
+	font-size: 25px;
+}
+
+.nav-center {
+    margin:0;
+    float:none;
+}
+.navbar-inner{
+	margin:20px;
+    text-align:center;
+}
+

@@ -1,0 +1,78 @@
+body {
+  padding: 0px;
+  background-image: url("/images/seemless_bk_2.jpg");
+
+}
+
+.inputTitleWrap{
+	text-align: left;
+	font-family:agency;
+	font-size:30px;
+	font-weight: bold;
+	color: #3c3c3c;
+}
+
+.inputFieldeWrap{
+	text-align: left;
+}
+
+input {
+	padding:5px; 
+    background-color: #FFF;
+}
+
+#codeField{
+	width: 45px;
+}
+
+#logoImage {
+	display: block;
+	margin: 20px;
+}
+
+#logoText{
+	display:block;
+	margin: 20px;
+}
+
+
+
+#usernameID, #passwordID{
+	display: block;
+		margin: 20px;
+			padding:5px; 
+
+
+	font-family:agency;
+	font-size:20px;
+	width: 250px;
+	color:#3c3c3c;
+	font-weight:bolder;
+	letter-spacing:1px
+
+ -webkit-border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  -webkit-border-bottom-left-radius: 7px;
+
+  -moz-border-radius-topleft: 7px;
+  -moz-border-radius-topright: 7px;
+  -moz-border-radius-bottomright: 7px;
+  -moz-border-radius-bottomleft: 7px;
+
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+
+  zoom: 1;
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #3c3c3c;
+	text-align:center;
+}
+

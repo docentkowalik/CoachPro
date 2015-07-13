@@ -1,0 +1,64 @@
+doctype html
+html
+ head
+  title= pageTitle 
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+  link(rel='stylesheet', href='/stylesheets/additions.css')
+  link(rel='shortcut icon', href='/images/favi.png')
+
+
+  body(onload='document.registerClub.fullManagerName.focus();')#reg
+   div.container
+    div.row
+     div.reg-container
+      center
+       hr#hr-top
+       h1.reg-header. REGISTER TEAM
+       hr#hr-bottom
+
+
+      center
+       form(action='/processRegisterClub', name='registerClub', id='regMe', method='post')
+        table
+         tr
+          td.inputTitleWrap. MANAGER NAME:
+          td.inputFieldWrap
+           input(name='fullManagerName', type='text', value='')
+
+         tr
+          td.inputTitleWrap. TEAM NAME:
+          td.inputFieldWrap
+           input(name='clubName', type='text', value='')
+
+         tr
+          td.inputTitleWrap. TEAM CODE:
+          td.inputFieldWrap
+           input(name='clubCode', type='text', value='' maxlength="3" id="codeField")
+
+         tr
+          td.inputTitleWrap. USERNAME:
+          td.inputFieldWrap
+           input(name='userName', type='text', value='')
+
+         tr
+          td.inputTitleWrap. PASSWORD:
+          td.inputFieldWrap
+           input(name='passWord', type='password', value='')
+
+         tr
+          td.inputTitleWrap. EMAIL:
+          td.inputFieldWrap
+           input(name='managerEmail' , type="email" , pattern="[^ @]*@[^ @]*" ,  value="")
+
+         tr
+          td.inputTitleWrap
+          td.inputFieldWrap
+           input(type='submit', value'REGISTER' class='btn reg-btn')
+           
+
+
+
+
+      
+      

@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/additions.css')
+    link(rel='shortcut icon', href='/images/favi.png')
+
+  body
+   div.container
+    div.row
+     div
+      center
+        
+        img(src="/images/LOGOIMG.png" id="logoImage")
+       
+        
+        img(src="/images/rsz_1rsz_protext.png" id="logoText")
+      center
+       p#login-text. 
+        "Join up now and assess you or your players training progression "
+      center
+       br
+       p #{msg}
+       form(action='/processLogin', name='loginUser', method='post')
+        center
+         input(name='uName', type='text', value='', placeholder='USERNAME' id="usernameID") 
+         input(name='pWord', type='password', value='' placeholder='PASSWORD' id="passwordID")
+         button(type='submit', value='LOGIN' class='btn reg-btn').
+          LOGIN
+        center
+        a(href='/registerClub').reg-link. REGISTER TEAM?
+        a(href='/registerPlayer').reg-link. REGISTER PLAYER?
+       
+
